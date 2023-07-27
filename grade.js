@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 // Create a grading system that takes subject marks as input from the user through prompts and returns the corresponding grades using functions and if-else conditions.
 function myGrade() {
-    return new Promise((res) => {
+    return new Promise((resolve) => {
         inquirer
             .prompt([
             {
@@ -35,7 +35,7 @@ function myGrade() {
             else {
                 console.log("Fail");
             }
-            res(`This is your Grade.`);
+            resolve(`This is your Grade.`);
         });
     });
 }
